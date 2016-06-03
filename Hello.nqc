@@ -1,7 +1,12 @@
 task main(){
-OnFwd(OUT_A);
-Wait(400);
-OnRev(OUT_A);
-Wait(400);
-Off(OUT_A):
+
+    run();
+}
+
+task run(){
+    OnFwd(OUT_A);
+    Wait(400);
+    OnRev(OUT_A);
+    Wait(400);
+    Off(OUT_A);
 }
