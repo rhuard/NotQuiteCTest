@@ -1,12 +1,25 @@
 task main(){
 
-    run();
+    start init;
+
+    start run;
+
+}
+
+task init(){
+
+    SetSensor(SENSOR_1, SENSOR_TOUCH);
 }
 
 task run(){
-    OnFwd(OUT_A);
-    Wait(400);
-    OnRev(OUT_A);
-    Wait(400);
-    Off(OUT_A);
+
+    while(true){
+        if(SENSOR_1 == 1){
+            OnFwd(OUT_A);
+            Wait(400);
+            OnRev(OUT_A);
+            Wait(400);
+            Off(OUT_A);
+        }
+    }
 }
