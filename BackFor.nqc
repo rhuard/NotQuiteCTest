@@ -1,0 +1,24 @@
+task main(){
+
+    start init;
+
+    start run;
+
+}
+
+task init(){
+
+    SetSensor(SENSOR_1, SENSOR_TOUCH);
+}
+
+task run(){
+
+    while(true){
+        if(SENSOR_1 == 1){
+            OnRev(OUT_A);
+        }else{
+            OnFwd(OUT_A);
+        }
+
+    }
+}
